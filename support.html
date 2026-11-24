@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Little Lasts</title>
+<meta name="description" content="Help and contact for Little Lasts.">
+<meta name="color-scheme" content="light dark">
+<!--
+  This page loads nothing from anywhere: no web fonts, no scripts from a CDN,
+  no analytics, no images.
+-->
+<style>
+  .contact { font-size: 1.05rem; margin-bottom: 2rem; }
+  :root {
+    --accent: #C7832F;
+    --bg: #FFFFFF;
+    --surface: #FAF8F5;
+    --text: #1C1B19;
+    --muted: #6B6862;
+    --rule: #E6E1D8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #E0A458;
+      --bg: #1F2233;
+      --surface: #2B2F45;
+      --text: #EDE6DA;
+      --muted: #A7A2A0;
+      --rule: #363B57;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main { max-width: 41rem; margin: 0 auto; }
+
+  header {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+
+  /* The app icon's motif: earlier times fading in, then the last one. */
+  .mark { display: block; width: 5rem; height: 1.25rem; margin-bottom: 1.25rem; }
+  .mark .past { fill: var(--muted); }
+  .mark .last { fill: var(--accent); }
+
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -0.01em; }
+  .app-name { color: var(--muted); font-size: 1rem; margin: 0 0 1.5rem; }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0; }
+
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.75rem 0 .75rem;
+    padding-top: .25rem;
+    letter-spacing: -0.005em;
+  }
+
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: .4rem; }
+
+  .lede {
+    font-size: 1.3rem;
+    line-height: 1.45;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 2rem;
+  }
+
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Language switch. Without JavaScript both languages simply stay visible,
+     which is a worse layout but never a broken page. */
+  .langs { display: flex; gap: .5rem; margin-top: 1.5rem; }
+  .langs button {
+    font: inherit;
+    font-size: .9rem;
+    padding: .35rem .9rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #1F2233;
+    font-weight: 600;
+  }
+  .langs:not(.ready) { display: none; }
+
+  section[hidden] { display: none; }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+
+  @media (max-width: 30rem) {
+    header { padding-top: 2.5rem; }
+    h1 { font-size: 1.6rem; }
+    .lede { font-size: 1.15rem; padding: 1rem 1.15rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <svg class="mark" viewBox="0 0 80 20" aria-hidden="true">
+      <circle class="past" cx="6" cy="10" r="4" opacity=".3"></circle>
+      <circle class="past" cx="18" cy="10" r="4" opacity=".45"></circle>
+      <circle class="past" cx="30" cy="10" r="4" opacity=".6"></circle>
+      <circle class="past" cx="42" cy="10" r="4" opacity=".8"></circle>
+      <circle class="last" cx="62" cy="10" r="8"></circle>
+    </svg>
+    <p class="app-name" id="app-name">Little Lasts</p>
+    <h1 id="page-title">Support</h1>
+
+    <div class="langs" id="langs">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="zh" aria-pressed="false">简体中文</button>
+    </div>
+  </header>
+
+  <section id="lang-en" lang="en">
+    <p class="contact">Questions, problems or ideas:
+      <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
+
+    <h2>How does it work?</h2>
+    <p>Add something that keeps happening — a bedtime story, a weekly call, a
+    dish someone makes — and log it each time it happens, in a few seconds.
+    Each thread learns its own rhythm. When one goes quiet for much longer than
+    usual, the app gently asks whether that was the last time. Say yes and it
+    keeps that last time as a memory.</p>
+
+    <h2>Why hasn't it asked me anything yet?</h2>
+    <p>It only asks once a thread has been quiet for about three times its usual
+    gap, and never sooner than two weeks. A new thread also waits a day, so you
+    can log older times without being asked straight away.</p>
+
+    <h2>How do I add a person?</h2>
+    <p>Open Settings, then tap <strong>Add a person</strong> under People. You can
+    also add one while creating a thread, under <strong>Person</strong>.</p>
+
+    <h2>What does “In memory” do?</h2>
+    <p>Tap a person's name on the home screen to edit them. With
+    <strong>In memory</strong> on, the app stops asking whether things with them
+    will happen again, and keeps their threads together at the bottom of the
+    home screen.</p>
+
+    <h2>Does it sync between my devices?</h2>
+    <p>Yes, through your own iCloud, when you are signed in with the same Apple
+    Account. Without iCloud everything stays on this iPhone.</p>
+
+    <h2>How do notifications work?</h2>
+    <p>At most one a day, at the time you choose in Settings. The gentle notes
+    on holidays and birthdays are off until you turn them on.</p>
+
+    <h2>How do I change the language?</h2>
+    <p>The app follows your iPhone. To change it for this app only, open
+    Settings → Apps → Little Lasts → Language.</p>
+
+    <h2>I found a problem</h2>
+    <p>Please email the address above and describe what happened. Your iPhone
+    model and iOS version help.</p>
+  </section>
+
+  <section id="lang-zh" lang="zh-Hans">
+    <p class="contact">问题、故障或建议：
+      <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
+
+    <h2>它是怎么用的？</h2>
+    <p>把一件反复发生的事记下来——一个睡前故事、每周一通电话、某个人做的一道菜——
+    每次发生时花几秒记一笔。每条线会摸清自己的节奏。当它安静得比平时久很多时，
+    应用会轻轻问一句：那会是最后一次吗？回答「是」，它就替你记住那最后一次。</p>
+
+    <h2>为什么它还没问过我？</h2>
+    <p>一条线要安静到平时间隔的大约三倍才会问，而且至少要两周。新建的线还会等一天，
+    方便你先补记以前的几次，不会马上被问。</p>
+
+    <h2>怎么添加一个人？</h2>
+    <p>打开「设置」，在「人」下面点<strong>新建一个人</strong>。新建一件事时，也可以在
+    <strong>这件事关于谁</strong>里添加。</p>
+
+    <h2>「怀念 TA」是什么意思？</h2>
+    <p>在首页点一个人的名字即可编辑。打开<strong>怀念 TA</strong>后，应用不会再问和
+    TA 有关的事是否还会发生，TA 的线会放在首页底部的「怀念」里。</p>
+
+    <h2>会在我的设备之间同步吗？</h2>
+    <p>会，通过你自己的 iCloud，只要各设备登录同一个 Apple 账户。没有 iCloud 时，
+    所有内容都只保存在这台 iPhone 上。</p>
+
+    <h2>通知是怎样的？</h2>
+    <p>每天最多一条，时间在「设置」里选。节日和生日的轻轻提醒默认关闭，需要时再打开。</p>
+
+    <h2>怎么切换语言？</h2>
+    <p>应用跟随 iPhone 的语言设置。若只想改这一个应用，请打开「设置 → App →
+    最后一次 → 语言」。</p>
+
+    <h2>我遇到了问题</h2>
+    <p>请发邮件到上面的地址，描述一下发生了什么。附上 iPhone 型号和 iOS 版本会更有帮助。</p>
+  </section>
+
+  <footer>
+    <p id="footer-note">Little Lasts is an iPhone app for noticing the things that happen again and again, and keeping the last time when one of them stops.</p>
+    <p><a href="./" id="footer-link">Privacy Policy</a></p>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var strings = {
+      "en": {
+            "page-title": "Support",
+            "app-name": "Little Lasts",
+            "footer-note": "Little Lasts is an iPhone app for noticing the things that happen again and again, and keeping the last time when one of them stops.",
+            "footer-link": "Privacy Policy"
+      },
+      "zh": {
+            "page-title": "支持",
+            "app-name": "最后一次",
+            "footer-note": "「最后一次」是一款 iPhone 应用：留意那些反复发生的小事，在某一件不再发生时，替你记住那最后一次。",
+            "footer-link": "隐私政策"
+      }
+};
+    var buttons = document.querySelectorAll("#langs button");
+    var sections = { en: document.getElementById("lang-en"), zh: document.getElementById("lang-zh") };
+
+    function show(lang) {
+      Object.keys(sections).forEach(function (key) { sections[key].hidden = key !== lang; });
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+      document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+      Object.keys(strings[lang]).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) { el.textContent = strings[lang][id]; }
+      });
+      document.title = strings[lang]["page-title"] + " — " + strings[lang]["app-name"];
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { show(b.dataset.lang); });
+    });
+
+    // Only hide a language once the switch is usable.
+    document.getElementById("langs").classList.add("ready");
+    show((navigator.language || "en").toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+  })();
+</script>
+</body>
+</html>

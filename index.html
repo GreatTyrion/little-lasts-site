@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Little Lasts</title>
+<meta name="description" content="Little Lasts collects no data. No account, no developer server, no analytics, no tracking.">
+<meta name="color-scheme" content="light dark">
+<!--
+  This page loads nothing from anywhere: no web fonts, no scripts from a CDN,
+  no analytics, no images.
+-->
+<style>
+  :root {
+    --accent: #C7832F;
+    --bg: #FFFFFF;
+    --surface: #FAF8F5;
+    --text: #1C1B19;
+    --muted: #6B6862;
+    --rule: #E6E1D8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #E0A458;
+      --bg: #1F2233;
+      --surface: #2B2F45;
+      --text: #EDE6DA;
+      --muted: #A7A2A0;
+      --rule: #363B57;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main { max-width: 41rem; margin: 0 auto; }
+
+  header {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+
+  /* The app icon's motif: earlier times fading in, then the last one. */
+  .mark { display: block; width: 5rem; height: 1.25rem; margin-bottom: 1.25rem; }
+  .mark .past { fill: var(--muted); }
+  .mark .last { fill: var(--accent); }
+
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -0.01em; }
+  .app-name { color: var(--muted); font-size: 1rem; margin: 0 0 1.5rem; }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0; }
+
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.75rem 0 .75rem;
+    padding-top: .25rem;
+    letter-spacing: -0.005em;
+  }
+
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: .4rem; }
+
+  .lede {
+    font-size: 1.3rem;
+    line-height: 1.45;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 2rem;
+  }
+
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Language switch. Without JavaScript both languages simply stay visible,
+     which is a worse layout but never a broken page. */
+  .langs { display: flex; gap: .5rem; margin-top: 1.5rem; }
+  .langs button {
+    font: inherit;
+    font-size: .9rem;
+    padding: .35rem .9rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #1F2233;
+    font-weight: 600;
+  }
+  .langs:not(.ready) { display: none; }
+
+  section[hidden] { display: none; }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+
+  @media (max-width: 30rem) {
+    header { padding-top: 2.5rem; }
+    h1 { font-size: 1.6rem; }
+    .lede { font-size: 1.15rem; padding: 1rem 1.15rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <svg class="mark" viewBox="0 0 80 20" aria-hidden="true">
+      <circle class="past" cx="6" cy="10" r="4" opacity=".3"></circle>
+      <circle class="past" cx="18" cy="10" r="4" opacity=".45"></circle>
+      <circle class="past" cx="30" cy="10" r="4" opacity=".6"></circle>
+      <circle class="past" cx="42" cy="10" r="4" opacity=".8"></circle>
+      <circle class="last" cx="62" cy="10" r="8"></circle>
+    </svg>
+    <p class="app-name" id="app-name">Little Lasts</p>
+    <h1 id="page-title">Privacy Policy</h1>
+    <p class="updated" id="page-updated">Last updated: 24 November 2026</p>
+
+    <div class="langs" id="langs">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="zh" aria-pressed="false">简体中文</button>
+    </div>
+  </header>
+
+  <section id="lang-en" lang="en">
+    <p class="lede">Little Lasts does not collect any data about you.</p>
+
+    <p>There is no account to create and no server run by the developer. The app
+    contains no analytics, no advertising and no tracking.</p>
+
+    <h2>What the app stores</h2>
+    <p>The things you keep track of, the times you log, your notes and photos,
+    the people you add and their birthdays are saved in the app's own database
+    on your iPhone.</p>
+
+    <h2>iCloud</h2>
+    <p>If you are signed in to iCloud, the app keeps your records in sync across
+    your own devices through Apple's iCloud, in your private iCloud database.
+    Only your Apple Account can read it; the developer cannot see it. This is
+    handled by Apple under Apple's privacy policy. You can turn it off in
+    Settings → your name → iCloud.</p>
+    <p>If you sign out of iCloud, the app removes its copy from that iPhone; your
+    records stay in your iCloud and come back when you sign in again.</p>
+
+    <h2>Photos</h2>
+    <p>You choose a photo with the system photo picker. The app receives only
+    the photo you picked and has no access to the rest of your library.</p>
+
+    <h2>Notifications</h2>
+    <p>Reminders are scheduled on your iPhone itself. No server sends them and
+    nothing about them leaves your device.</p>
+
+    <h2>What happens to your data</h2>
+    <ul>
+      <li>It is never sent to the developer or anyone else.</li>
+      <li>It is not shared or sold.</li>
+      <li>It is not used for advertising or analytics.</li>
+    </ul>
+
+    <h2>Deleting your data</h2>
+    <p>You can delete any entry, thread or person inside the app. Deleting the
+    app removes what it stored on your iPhone. To also remove the copy in iCloud,
+    open Settings → your name → iCloud → Manage Account Storage → Little Lasts
+    and delete its data.</p>
+
+    <h2>Children</h2>
+    <p>The app collects nothing from anyone, including children.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy ever changes, the updated version will be posted at this
+    address with a new date at the top.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy:
+      <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
+  </section>
+
+  <section id="lang-zh" lang="zh-Hans">
+    <p class="lede">「最后一次」不收集任何关于你的数据。</p>
+
+    <p>不需要注册账号，开发者也没有运营任何服务器。应用里没有数据统计、没有广告，
+    也没有追踪。</p>
+
+    <h2>应用保存了什么</h2>
+    <p>你记录的事、每一次的日期、写下的话和照片、添加的人和他们的生日，都保存在
+    你 iPhone 上属于本应用的数据库里。</p>
+
+    <h2>iCloud</h2>
+    <p>如果你登录了 iCloud，应用会通过 Apple 的 iCloud，在你自己的设备之间同步这些
+    记录。数据存放在你的 iCloud 私有数据库里，只有你的 Apple 账户能读取，开发者
+    看不到。这部分由 Apple 依照其隐私政策处理。你可以在「设置 → 你的名字 →
+    iCloud」中关闭。</p>
+    <p>如果你退出 iCloud，应用会删除这台 iPhone 上的副本；记录仍保存在你的 iCloud
+    中，重新登录后会回来。</p>
+
+    <h2>照片</h2>
+    <p>照片通过系统的照片选择器挑选。应用只拿到你选中的那一张，无法访问相册里的
+    其他内容。</p>
+
+    <h2>通知</h2>
+    <p>提醒由你的 iPhone 自己安排，不经过任何服务器，相关信息不会离开你的设备。</p>
+
+    <h2>你的数据会被如何处理</h2>
+    <ul>
+      <li>不会发送给开发者或任何人。</li>
+      <li>不会被共享或出售。</li>
+      <li>不会用于广告或数据分析。</li>
+    </ul>
+
+    <h2>删除你的数据</h2>
+    <p>任何一笔记录、一条线或一个人，都可以在应用里删除。删除应用会清除它在 iPhone
+    上保存的内容。若要同时删除 iCloud 中的副本，请打开「设置 → 你的名字 → iCloud →
+    管理账户储存空间 → 最后一次」，删除其数据。</p>
+
+    <h2>儿童</h2>
+    <p>本应用不向任何人收集数据，儿童也不例外。</p>
+
+    <h2>政策变更</h2>
+    <p>如果本政策有任何变更，更新后的版本会发布在此地址，并在顶部标注新的日期。</p>
+
+    <h2>联系方式</h2>
+    <p>有关本政策的问题请联系：
+      <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p id="footer-note">Little Lasts is an iPhone app for noticing the things that happen again and again, and keeping the last time when one of them stops.</p>
+    <p><a href="./support.html" id="footer-link">Support</a></p>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var strings = {
+      "en": {
+            "page-title": "Privacy Policy",
+            "app-name": "Little Lasts",
+            "footer-note": "Little Lasts is an iPhone app for noticing the things that happen again and again, and keeping the last time when one of them stops.",
+            "page-updated": "Last updated: 24 November 2026",
+            "footer-link": "Support"
+      },
+      "zh": {
+            "page-title": "隐私政策",
+            "app-name": "最后一次",
+            "footer-note": "「最后一次」是一款 iPhone 应用：留意那些反复发生的小事，在某一件不再发生时，替你记住那最后一次。",
+            "page-updated": "最后更新：2026 年 11 月 24 日",
+            "footer-link": "支持"
+      }
+};
+    var buttons = document.querySelectorAll("#langs button");
+    var sections = { en: document.getElementById("lang-en"), zh: document.getElementById("lang-zh") };
+
+    function show(lang) {
+      Object.keys(sections).forEach(function (key) { sections[key].hidden = key !== lang; });
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+      document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+      Object.keys(strings[lang]).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) { el.textContent = strings[lang][id]; }
+      });
+      document.title = strings[lang]["page-title"] + " — " + strings[lang]["app-name"];
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { show(b.dataset.lang); });
+    });
+
+    // Only hide a language once the switch is usable.
+    document.getElementById("langs").classList.add("ready");
+    show((navigator.language || "en").toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+  })();
+</script>
+</body>
+</html>
